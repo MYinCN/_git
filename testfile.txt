@@ -2,3 +2,5 @@ This is a test for GIT use.
 I didn't know what I can do.
 So I used this.
 A new line is added.
+
+Another new line is added.
