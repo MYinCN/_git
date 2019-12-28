@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>红绿棋</title>
+    <meta charset="UTF-8">
+</head>
+<title>红绿棋</title>
+<body>
+
+    <div id="container" style="width:250px;padding-left:400px;">
+        <div id="header" style="background-color:#FFFFFF;padding-left:55px;"><h1 style="margin-bottom:0;">红绿争地棋</h1></div>
+        <table border="1">
+            <tr>
+                <td><button onclick = 'alert("恭喜获得胜利！")' type="submit" name='chessLoc' value='00' style="background-color: #{{c00}}; border-style:none;width:60px; height:60px;"></button></td>
+                <td><button type="submit" name='chessLoc' value='01' style="background-color: #{{c01}}; border-style:none;width:60px; height:60px;"></button></td>
+                <td><button type="submit" name='chessLoc' value='02' style="background-color: #{{c02}}; border-style:none;width:60px; height:60px;"></button></td>
+                <td><button type="submit" name='chessLoc' value='03' style="background-color: #{{c03}}; border-style:none;width:60px; height:60px;"></button></td>
+            </tr>
+            <tr>
+                <td><button type="submit" name='chessLoc' value='10' style="background-color: #{{c10}}; border-style:none;width:60px; height:60px;"></button></td>
+                <td><button type="submit" name='chessLoc' value='11' style="background-color: #{{c11}}; border-style:none;width:60px; height:60px;"></button></td>
+                <td><button type="submit" name='chessLoc' value='12' style="background-color: #{{c12}}; border-style:none;width:60px; height:60px;"></button></td>
+                <td><button type="submit" name='chessLoc' value='13' style="background-color: #{{c13}}; border-style:none;width:60px; height:60px;"></button></td>
+            </tr>
+            <tr>
+                <td><button type="submit" name='chessLoc' value='20' style="background-color: #{{c20}}; border-style:none;width:60px; height:60px;"></button></td>
+                <td><button type="submit" name='chessLoc' value='21' style="background-color: #{{c21}}; border-style:none;width:60px; height:60px;"></button></td>
+                <td><button type="submit" name='chessLoc' value='22' style="background-color: #{{c22}}; border-style:none;width:60px; height:60px;"></button></td>
+                <td><button type="submit" name='chessLoc' value='23' style="background-color: #{{c23}}; border-style:none;width:60px; height:60px;"></button></td>
+            </tr>
+            <tr>
+                <td><button type="submit" name='chessLoc' value='30' style="background-color: #{{c30}}; border-style:none;width:60px; height:60px;"></button></td>
+                <td><button type="submit" name='chessLoc' value='31' style="background-color: #{{c31}}; border-style:none;width:60px; height:60px;"></button></td>
+                <td><button type="submit" name='chessLoc' value='32' style="background-color: #{{c32}}; border-style:none;width:60px; height:60px;"></button></td>
+                <td><button type="submit" name='chessLoc' value='33' style="background-color: #{{c33}}; border-style:none;width:60px; height:60px;"></button></td>
+            </tr>
+        </table>
+        <br>
+        <form method='post' action='/'>
+            <button type="submit" style="width:100px;height:50px;margin-left:85px;"><b>重新开始|-_-|</b></button>
+        </form>
+        <b><p style="color:#{{cside}}">&nbsp;&nbsp;{{info}}</p></b>
+        <table>
+            <tr>
+                <td><p style="color:#FF0000">红方共{{rsum}}颗棋子</p></td>
+                <td><p style="color:#009100">绿方共{{gsum}}颗棋子</p></td>
+            </tr>
+        </table>
+    </div>
+    <div id="footer" style="padding-left:200px;">规则：<br>
+            <ol>
+                <li>双方轮流下棋，第一步红方下一颗，然后绿方下两颗，接下来轮流各下两颗，左上右下角不能下；</li>
+                <li>任意一方出现四连，则获胜，这是判断胜利唯一条件，与吃子无关；</li>
+                <li>从 两侧/上下/对角 夹住对方后，吃掉对方棋子（堵在角上不算）。一次只能吃一颗，夹住两颗不能吃掉；</li>
+                <li>双方可在被吃掉位置重新下子。只在一方下棋时判断吃子。</li>
+            </ol>
+    </div>
+</body>
+</html>
